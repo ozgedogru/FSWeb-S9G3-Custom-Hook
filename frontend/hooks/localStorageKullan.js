@@ -5,7 +5,7 @@ function useLocalStorage(key, initialValue) {
     const localValue = localStorage.getItem(key);
 
     if (localValue) {
-      return localValue;
+      return JSON.parse(localValue);
     } else {
       return initialValue;
     }
